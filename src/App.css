@@ -1,38 +1,313 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap');
+
+
+:root{
+  --fontraleway:'Raleway', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  font-family: var(--fontraleway);
+box-sizing: border-box;
+color: orange;
+
+}
+body{
+  font-size: 16px;
+ overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  color: #4FC5F0;
+  font-size: 2rem;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  background-color: #F5F5F5;
+  padding: 1vh 3vw;
+  border-bottom: rgb(221, 220, 220) solid 4px;
+
+}
+
+form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-start;
+  position: absolute;
+  left: 10vw;
+
+}
+
+label{
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #F98A1E;
+  margin-bottom: 5vh;
+}
+
+.submit_but{
+  background-color: #F98A1E;
   color: white;
+  border: none;
+  padding: 9px 22px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.submit_but:focus{
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.otpinput{
+  height: 7vh;
+  border-style: solid solid solid solid ;
+  border-color: rgb(231, 228, 228);
+  border-radius: 5px;
+  border-width: 0.7px 2px 3.5px 2px;
+padding: 9px;
+
+transition: border 0.2s linear;
+margin-bottom: 3vh;
+color: black;
 }
+
+.otpinput:focus{
+outline: none;
+border-style: solid;
+border-color:  #F98A1E;
+border-width: 3px;
+box-shadow: none;
+}
+
+.home{
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: url(./images/bmi3.png);
+  background-repeat: no-repeat;
+  background-size: 60vw 80vh;
+  background-position:top right;
+  position: relative;
+  
+}
+
+.age_home{
+  background-image: url(./images/bmi4.png);
+  background-size: 30vw 70vh;
+  background-position:50vw 6vh;
+  /* enter another image */
+}
+
+Link{
+  text-decoration: none;
+}
+
+h2{
+  margin-top: 8vh;
+}
+
+.result_home{
+  padding-left: 8.5vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: url(./images/bmi1.png);
+  background-repeat: no-repeat;
+  background-size: 40vw 80vh;
+  background-position:100% 110%;
+  position: relative;
+ 
+}
+
+.meter{
+  height: 5.3vh;
+  width: 26vw;
+  background-color: #4FC5F0;
+  margin:4vh 0 ;
+  border-radius: 4vh;
+  position: relative;
+  display: flex;
+
+}
+
+.stick{
+  position: absolute;
+  height: 8vh;
+  width:3px;
+  background-color: black;
+  top: -1.35vh;
+  left: 24%;
+ transition: left 2s  cubic-bezier(0.175, 0.885, 0.32, 1.275)  3s;
+
+}
+
+.green{
+  height: 100%;
+  width: 18.5%;
+  background-color: green;
+  border-radius:  4vh 0 0 4vh ;
+}
+
+.blue{
+  height: 100%;
+  width: 6.4%;
+  background-color: rgb(44, 105, 219);
+}
+
+.orange{
+  height: 100%;
+  width: 5%;
+  background-color: orange;
+}
+
+.red{
+  height: 100%;
+  width: 70.1%;
+  background-color: red;
+  border-radius: 0 4vh 4vh 0;
+}
+
+
+
+
+.values{
+  font-size: 1.06rem;
+ font-weight: 600;
+ line-height: 0.5rem;
+}
+
+table{
+
+  margin:  7vh 0 4vh 0;
+  border-style: solid solid solid solid ;
+border-color: rgb(231, 228, 228);
+border-radius: 8px;
+border-width: 0.7px 2px 3.5px 2px;
+
+}
+
+td{
+  width: 15vw;
+  height: 9vh;
+  text-align: center;
+  padding: 3.3vh;
+ font-size: 0.97rem;
+ font-weight: 500;
+
+}
+
+th{
+  width: 15vw;
+  text-align: center;
+  padding: 3.7vh;
+font-size: 1.06rem;
+  font-weight: 900;
+}
+
+.table_div{
+  height: 9vh;
+  width: 15vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gdiv{
+  height: 2.4vh;
+  width: 8vw;
+  background-color: green;
+  border-radius: 0.7vh;
+}
+
+.bdiv{
+  height: 2.4vh;
+  width: 8vw;
+  background-color: rgb(37, 99, 214);
+  border-radius: 0.7vh;
+}
+
+.odiv{
+  height: 2.4vh;
+  width: 8vw;
+  background-color: orange;
+  border-radius: 0.7vh;
+}
+
+.rdiv{
+  height: 2.4vh;
+  width: 8vw;
+  background-color: red;
+  border-radius: 0.7vh;
+}
+
+.para{
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+  margin-bottom: 2vh;
+}
+
+.getstarted_but{
+  margin-top: 2vh;
+}
+
+.getstarteddiv{
+  /* width: 100vw; */
+  height: 80vh;
+padding:15vh 0 0 10vw ;
+background-image: url(./images/bmi2.png);
+background-size: 50vw 70vh;
+background-position:top right;
+background-repeat: no-repeat;
+
+}
+
+.getdiv{
+height: 50vh;
+width: 30vw;
+  display: flex;
+  flex-direction: column;
+ align-items:center;
+  justify-content: center;
+ 
+
+}
+
+#gender{
+  outline: none;
+  height: 7vh;
+  border-style: solid solid solid solid ;
+  border-color: rgb(216, 214, 214);
+  border-radius: 5px;
+  border-width: 0.7px 2px 3.5px 2px;
+  margin-bottom: 3vh;
+  width: 13vw;
+  padding: 9px;
+  
+}
+
+option{
+  font-weight: 700;
+   width: 5vw;
+   outline: none;
+  
+}
+#gender:focus{
+
+  border-style: solid;
+  border-color:  #F98A1E;
+  border-width: 3px;
+  box-shadow: none;
+
+}
+/* 
+ option:hover,option::selection{
+  background-color:#F98A1E;
+  outline: none;
+} */

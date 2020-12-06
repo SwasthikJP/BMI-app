@@ -1,24 +1,34 @@
-import logo from './logo.svg';
+import Otppage from './components/otp'
+import Ageandgenderpage from './components/ageandgender'
+import Resultpage from './components/result'
+import Getstarted from './components/getstarted'
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  //  <Ageandgenderpage/>
+  <Router>
+     <Switch>
+          <Route exact path="/">
+            <Getstarted />
+          </Route>
+          <Route path="/otp">
+            <Otppage />
+          </Route>
+          <Route path="/info">
+            <Ageandgenderpage />
+          </Route>
+          <Route path="/result">
+            <Resultpage />
+          </Route>
+        </Switch>
+  </Router>
   );
 }
 
